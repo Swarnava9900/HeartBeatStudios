@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-.nav{
+nav{
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -46,7 +46,8 @@
     width: 20px;
     height: 2px;
     background-color: black;
-    margin: 3px;
+    margin: 5px;
+    transition: all 0.3s ease;
 }
 
 .nav-marking{
@@ -75,9 +76,12 @@
 
     }
     .nav-links li{
-        opacity: 100;
+        opacity: 0;
     }
     .burger{
+        display: block;
+    }
+    .burgerBox {
         display: block;
     }
 }
@@ -86,3 +90,26 @@
     transform: translateX(0%);
 }
 
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+    
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 5px);
+  }
+  
+.toggle .line2 {
+    opacity: 0;
+}
+  
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -5px);
+  }
