@@ -26,10 +26,10 @@ const buttonChange = () => {
   var btnTextlog = document.getElementById('logbtn')
 
   btnsig.onclick = function(){
-    btnsig.classList.add("sig-active");
+    btnsig.classList.add("active");
   }
   btnlog.onclick = function(){
-    btnlog.classList.add("log-active"); 
+    btnlog.classList.add("active"); 
   }
 }
 
@@ -37,12 +37,14 @@ const buttonChange = () => {
 const login = () => {
   document.querySelector("#btnlog").addEventListener("click",function(){
     document.querySelector(".nav").classList.add("active");
-    document.querySelector(".popup").classList.add("active");
+    document.querySelector(".img").classList.add("active");
+    document.querySelector(".popup-log").classList.add("active");
   });
-  document.querySelector(".popup .close-btn").addEventListener("click",function(){
+  document.querySelector(".popup-log .close-btn").addEventListener("click",function(){
     document.querySelector(".nav").classList.remove("active");
-    document.querySelector(".popup").classList.remove("active");
-    btnlog.classList.remove("log-active");
+    document.querySelector(".img").classList.remove("active");
+    document.querySelector(".popup-log").classList.remove("active");
+    btnlog.classList.remove("active");
   });
 }
 
