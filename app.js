@@ -21,21 +21,21 @@ const navSlide = () => {
   });
 }
 
-const buttonChange = () => {
-  var btnTextsig = document.getElementById('sigbtn')
-  var btnTextlog = document.getElementById('logbtn')
+// const buttonChange = () => {
+//   var btnTextsig = document.getElementById('sigbtn')
+//   var btnTextlog = document.getElementById('logbtn')
 
-  btnsig.onclick = function(){
-    btnsig.classList.add("active");
-  }
-  btnlog.onclick = function(){
-    btnlog.classList.add("active"); 
-  }
-}
+//   btnsig.onclick = function(){
+//     btnsig.classList.add("active");
+//   }
+//   btnlog.onclick = function(){
+//     btnlog.classList.add("active"); 
+//   }
+// }
 
 
 const login = () => {
-  document.querySelector("#btnlog").addEventListener("click",function(){
+  document.querySelector(".log").addEventListener("click",function(){
     document.querySelector(".nav").classList.add("active");
     document.querySelector(".img").classList.add("active");
     document.querySelector(".popup-log").classList.add("active");
@@ -50,5 +50,5 @@ const login = () => {
 
 
 navSlide();
-buttonChange();
+// buttonChange();
 login();

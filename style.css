@@ -15,18 +15,24 @@
 }
 
 .name{
+    flex: 1;
+    text-align: left;
     color: rgb(81, 0, 231);
+    padding: 20px 40px;
     letter-spacing: 0px;
     font-size: 35px;
 }
 
 .nav-links{
+    padding: 20px 40px;
     justify-content: space-around;
-    width: 40%;
+    width: 50%;
     z-index: 99999;
 }
 
 .nav-links th{
+    flex: 1;
+    text-align: right;
     font-weight: bold;
     z-index: 99999;
 }
@@ -34,7 +40,7 @@
 .nav-links a{
     color: black;
     text-decoration: none;
-    letter-spacing: -1px;
+    letter-spacing: 1px;
     font-weight: bold;
     font-size: 17px;
     z-index: 99999;
@@ -73,7 +79,7 @@
     background: linear-gradient(to bottom right, rgb(81, 0, 231), #ff2b75);
     font-family: 'Cagliostro', sans-serif;
     font-size: 17px;
-    border-radius: 15px;
+    border-radius: 10px;
     text-align: center;
     box-shadow: 0 6px 20px -5px rgba(0,0,0,0.4);
     position: relative;
@@ -90,7 +96,7 @@
     background: linear-gradient(to bottom right, rgb(81, 0, 231), #ff2b75);
     font-family: 'Cagliostro', sans-serif;
     font-size: 17px;
-    border-radius: 15px;
+    border-radius: 10px;
     text-align: center;
     box-shadow: 0 6px 20px -5px rgba(0,0,0,0.4);
     position: relative;
@@ -98,7 +104,7 @@
 }
 
 .popup-log{
-    background: linear-gradient(to bottom right, white, grey);
+    background: linear-gradient(to bottom right, white, pink, white);
     font-family: "Raleway", sans-serif;
     position: absolute;
     top: 150%;
@@ -173,7 +179,7 @@
     padding: 10px;
     outline: none;
     border: 1px solid #aaa;
-    border-radius: 5x;
+    border-radius: 10px;
 }
 
 .popup-log .form .form-element button{
@@ -230,6 +236,10 @@
     }
     .burgerBox {
         display: block;
+    }
+    .img-container
+    {
+        display: none;
     }
 }
 
