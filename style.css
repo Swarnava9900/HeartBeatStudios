@@ -7,10 +7,10 @@
 .nav{
     display: flex;
     justify-content: space-around;
+    font-family: 'Cagliostro', sans-serif;
     align-items: center;
     min-height: 12.5vh;
     background-color: white;
-    font-family: 'Cagliostro', sans-serif;
     z-index: 99999;
 }
 
@@ -21,18 +21,21 @@
     padding: 20px 40px;
     letter-spacing: 0px;
     font-size: 35px;
+    font-weight: 100;
+    width: 100%;
+    position: relative;
 }
 
 .nav-links{
-    padding: 20px 40px;
     justify-content: space-around;
+    flex: 0;
+    text-align: right;
     width: 50%;
     z-index: 99999;
 }
 
 .nav-links th{
-    flex: 1;
-    text-align: right;
+    padding: 20px 15px;
     font-weight: bold;
     z-index: 99999;
 }
@@ -42,11 +45,14 @@
     text-decoration: none;
     letter-spacing: 1px;
     font-weight: bold;
-    font-size: 17px;
+    font-size: 18px;
     z-index: 99999;
 }
 
 .burger{
+    flex: 0;
+    text-align: right;
+    padding: 20px 40px;
     display: none;
     cursor: pointer;
     z-index: 99999;
@@ -76,7 +82,7 @@
     border: 0;
     outline: none;
     color:white;
-    background: linear-gradient(to bottom right, rgb(81, 0, 231), #ff2b75);
+    background: rgb(81, 0, 231);
     font-family: 'Cagliostro', sans-serif;
     font-size: 17px;
     border-radius: 10px;
@@ -84,6 +90,11 @@
     box-shadow: 0 6px 20px -5px rgba(0,0,0,0.4);
     position: relative;
     overflow: hidden;
+}
+
+.sig:hover{
+    background: linear-gradient(to bottom right, rgb(123, 66, 230), #ff6299);
+    transition: all 100s ease-in;
 }
 
 .log{
@@ -93,7 +104,7 @@
     border: 0;
     outline: none;
     color:white;
-    background: linear-gradient(to bottom right, rgb(81, 0, 231), #ff2b75);
+    background: rgb(81, 0, 231);
     font-family: 'Cagliostro', sans-serif;
     font-size: 17px;
     border-radius: 10px;
@@ -103,8 +114,12 @@
     overflow: hidden;
 }
 
+.log:hover{
+    background: linear-gradient(to bottom right, rgb(123, 66, 230), #ff6299);
+}
+
 .popup-log{
-    background: linear-gradient(to bottom right, white, pink, white);
+    background: linear-gradient(to bottom right, white, rgba(254, 255, 200, 0.945), white);
     font-family: "Raleway", sans-serif;
     position: absolute;
     top: 150%;
@@ -113,16 +128,23 @@
     transform: translate(-50%, -50%) scale(1.25);
     width: 380px;
     padding: 20px 30px;
-    box-shadow: 2px 2px 5px 5px rgba(0,0,0,0.15);
+    box-shadow: 2px 2px 5px 5px rgba(0,0,0,0.25);
     border-radius: 10px;
     transition: top 0ms ease-in-out 200ms,
                 opacity 200ms ease-in-out 0ms,
                 transform 200ms ease-in-out 0ms;
 }
 
+.img-container{
+    display: flex;
+    padding: 20px 30px;
+    align-content: flex-end;
+    opacity: 1;
+}
+
 @media screen and (max-width: 400px){
-    .popup {
-        width: 300px;
+    .popup-log{
+        width: 320px;
         height: 350px;
     }
 }
@@ -204,9 +226,12 @@
 }
 
 
-@media screen and (max-width: 1300px){
+@media screen and (max-width: 1100px){
     body{
         overflow-x: hidden;
+    }
+    .name{
+        text-align: center;
     }
     .nav-links{
         position: absolute;
@@ -219,7 +244,6 @@
         width: 75%;
         transform: translateX(100%);
         transition: transform 0.75s ease-in;
-
     }
     .nav-links th{
         opacity: 0;
@@ -237,9 +261,31 @@
     .burgerBox {
         display: block;
     }
-    .img-container
-    {
+    .banner video{
         display: none;
+    }
+    .img-container{
+        opacity: 0;
+    }
+}
+
+@media screen and (min-width: 1100px){
+    .banner video{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 1;
+    }
+    
+    .banner h4{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        mix-blend-mode: screen;
     }
 }
 
@@ -270,13 +316,3 @@
 .toggle .line3 {
     transform: rotate(45deg) translate(-5px, -5px);
   }
-
-.img-container{
-    position: absolute;
-    top: 41.5%;
-    left: 70%;
-    opacity: 1;
-    transform: translate(-50%, -50%);
-    width: 766px;
-    height: 405px;
-}
